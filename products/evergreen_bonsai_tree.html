@@ -1,0 +1,81 @@
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Yanone+Kaffeesatz:wght@200..700&display=swap');
+
+  html {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  body {
+    font-family: "Figtree", sans-serif;
+    padding: 0px;
+    margin: 0px;
+    background-color: #ffffff;
+    color: #000;
+    text-align: center;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  #shop_body {
+    position: absolute;
+    top: 50%;
+    transform: translate(0%, -50%);
+    margin: 0px;
+    padding: 0px;
+    background-color: #e0e0e0;
+    height: 575px;
+    width: 100%;
+  }
+
+  #img_container {
+    margin: 10px;
+    padding: 0px;
+    height: 550px;
+    align-items: center;
+    float: left;
+  }
+
+  #shop_container {
+    float: right;
+    width: 500px;
+    margin: 10px;
+  }
+
+  #shop_info_and_form {
+    padding: 10px;
+    text-align: left;
+  }
+</style>
+<div id="shop_body">
+  <h1 style="margin-top: 50px;">Evergreen Bonsai Tree</h1>
+  <h3>$249</h3>
+  <div id="img_container">
+    <img style="weight: 400px; height: 400px;" src="https://cdn11.bigcommerce.com/s-bhqinueo9m/images/stencil/1024x1024/products/14721/18985/green-mound-juniper-small-Juniperus-procumbens-Nana__40589.1721919841.jpg?c=2">
+  </div>
+  <div id="shop_container"> This is an amazing descrition for this specific bonsai tree, we talk about all the cool details but we keep it professional. We also can talk about other thing like where the trees are made or any special things about them. This is just temporary text that will be replaced eventually. <div id=shop_info_and_form>
+      <p>Select a Size:</p>
+      <form>
+        <input type="radio" id="mini" name="size">
+        <label for="mini">Mini</label>
+        <br>
+        <input type="radio" id="standard" name="size">
+        <label for="standard">Standard</label>
+        <br>
+        <input type="radio" id="large" name="size">
+        <label for="large">Large</label>
+      </form>
+      <p>Enter the Destination:</p>
+      <input type="text" id="destination" placeholder="Minnetonka, Minnesota">
+    </div>
+    <div style="text-align: center; margin-top: 30px;">
+      <button style="height: 50px; width: 150px; font-size: 25px;" onclick="notEnoughTimeOrBudget()">Buy Now</button>
+    </div>
+  </div>
+</div>
+<script>
+  function notEnoughTimeOrBudget() {
+    alert("This would work but we don't have the time or budget");
+    location.replace(location.href.split('/').slice(0, 4).join('/'));
+  }
+</script>
