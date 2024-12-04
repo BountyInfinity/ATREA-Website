@@ -19,8 +19,18 @@
 
   #banner {
     width: 100%;
-    height: 125px;
-    background-color: #6AA84F;
+    height: 100px;
+    background-color: #6AA84f;
+    position: fixed;
+    padding: 0px;
+    display: table;
+    vertical-align: middle;
+    text-align: center;
+    color: #000;
+  }
+  
+  #shop_container {
+  	
   }
 
   .shop_card {
@@ -38,32 +48,49 @@
     width: 150px;
     height: 150px;
   }
+  
+  .shop_card p {
+  	font-size: 20px;
+    margin: 0px;
+  }
 
   #about_us {
+  	margin-top: 100px;
     width: 100%;
-    height: 275px;
-    padding: 10px;
-    background-color: #555;
+    height: 200px;
+    background-color: #333;
     color: #fff;
+    padding: 0px;
+    display: table;
+  }
+  
+  #about_us_text_container {
+    margin: 20px;
+    border: 1px solid #000;
   }
 </style>
-
 <div id="banner">
-  <h1 style="font-size: 70px; padding-top: 20px;">ATREA: Grow Your Happiness</h1>
+  <h1 style="font-size: 70px; display: table-cell; margin: 10px;">Atrea: Grow Your Happiness</h1>
 </div>
 
+<div id="shop_container" style="margin-top: 125px;">
+  <h1>Best Sellers</h1>
+  
 <!--Bodhi-->
-<button class="shop_card" onclick="test()">
+<button class="shop_card" onclick="goto('products/aquarium_bonsai.html')">
   <div>
     <img src="https://cdn11.bigcommerce.com/s-bhqinueo9m/images/stencil/1024x1024/products/14721/18985/green-mound-juniper-small-Juniperus-procumbens-Nana__40589.1721919841.jpg?c=2">
   </div>
   <h2>Evergreen Bonsai Tree</h2>
+  <p>$249</p>
 </button>
+ 
 <button class="shop_card">
   <div>
     <img src="https://cdn11.bigcommerce.com/s-bhqinueo9m/images/stencil/1024x1024/products/14721/18985/green-mound-juniper-small-Juniperus-procumbens-Nana__40589.1721919841.jpg?c=2">
   </div>
   <h2>Aquarium Bonsai Tree</h2>
+  <p>$249</p>
 </button>
 
 <!--Owen-->
@@ -72,21 +99,27 @@
     <img src="https://cdn11.bigcommerce.com/s-bhqinueo9m/images/stencil/1024x1024/products/14721/18985/green-mound-juniper-small-Juniperus-procumbens-Nana__40589.1721919841.jpg?c=2">
   </div>
   <h2>Bonsai Tree Candle</h2>
+  <p>$249</p>
 </button>
+  
 <button class="shop_card">
   <div>
     <img src="https://cdn.shopify.com/s/files/1/0249/4811/3492/files/SJapan_A_stunning_Japanese_maple_Bonsai_tree_in_a_decorative_po_3b20d658-d1a7-4150-9ff6-be2fac44772c_600x600.png?v=1683100302">
   </div>
   <h2>Japanese Maple Bonsai</h2>
+  <p>$249</p>
 </button>
+</div>
 
-<div id="about_us"> this is just placeholder stuff so it is good to show the stuff off and this is just placeholder stuff so it is good to show the stuff off and this is just placeholder stuff so it is good to show the stuff off and this is just placeholder stuff so it is good to show the stuff off and this is just placeholder stuff so it is good to show the stuff off and this is just placeholder stuff so it is good to show the stuff off and this is just placeholder stuff so it is good to show the stuff off and this is just placeholder stuff so it is good to show the stuff off and this is just placeholder stuff so it is good to show the stuff off and this is just placeholder stuff so it is good to show the stuff off and this is just placeholder stuff so it is good to show the stuff off and this is just placeholder stuff so it is good to show the stuff off and this is just placeholder stuff so it is good to show the stuff off and this is just placeholder stuff so it is good to show the stuff off and this is just placeholder stuff so it is good to show the stuff off and this is just placeholder stuff so it is good to show the stuff off and this is just placeholder stuff so it is good to show the stuff off and this is just placeholder stuff so it is good to show the stuff off and this is just placeholder stuff so it is good to show the stuff off and this is just placeholder stuff so it is good to show the stuff off and this is just placeholder stuff so it is good to show the stuff off and this is just placeholder stuff so it is good to show the stuff off and this is just placeholder stuff so it is good to show the stuff off and this is just placeholder stuff so it is good to show the stuff off and this is just placeholder stuff so it is good to show the stuff off and this is just placeholder stuff so it is good to show the stuff off and this is just placeholder stuff so it is good to show the stuff off </div>
+<div id="about_us">
+  <div id="about_us_text_container"> 
+    <p>We were founded in 1973 when our founder Moto Yukio decided that the bonsai market had room for growth. Thus he started ATREA in order to create new bonsai products to appease the growing customer base. Fast forward to today we are now a global company. The company continues to sell bonsai trees to this day. Our company values dedication, trust, and communicarion, as well as a strong relationship with our customer base. ATREA also gives back 13% of their profits to the environment. We have many products abailable and our shipping takes 2 to 3 business days in the U.S and around 2 to 5 business days outside the U.S.</p>
+  <h3>© 2024 ATREA</h3>
+  </div>
+</div>
 
 <script>
-  // You can use the console window at the bottom
-  //var h1 = document.querySelector('h1');
-  //console.log(h1.textContent);
-  function test() {
-    alert("why hello there");
+  function goto(path) {
+    location.replace(path);
   }
 </script>
